@@ -1,5 +1,10 @@
 # Slack Bot
 
+Every monday the Slack Bot sends a DM saying please fill your To Dos for the week. Then everyday till Friday on each day the bot will send me a message saying -
+*Tuesday: Here are things you need to do.*
+
+Then end of the week it will send me a report - you completed x% task. etc
+
 ## High level Flow
 
 1. Authenticate with the Slack API and obtain a bot token.
