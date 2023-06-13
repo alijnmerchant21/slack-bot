@@ -1,28 +1,62 @@
+<!DOCTYPE html>
 <html>
-  <body>
-    <form>
+<head>
+  <title>My Todo App</title>
+</head>
+<body>
+  <h1>My Todo App</h1>
+
+  <form>
+    <div>
       <label for="task-name">Task Name:</label>
-      <input type="text" id="task-name" name="task-name" required><br><br>
-  
-      <label for="priority">Priority:</label>
-      <input type="number" id="priority" name="priority" min="1" max="5" required><br><br>
-  
+      <input type="text" id="task-name" name="task-name" required>
+    </div>
+
+    <div>
+      <label for="priority">Priority (1-5):</label>
+      <input type="number" id="priority" name="priority" min="1" max="5" required>
+    </div>
+
+    <div>
       <label for="deadline">Deadline:</label>
-      <input type="datetime-local" id="deadline" name="deadline" required><br><br>
-  
+      <input type="datetime-local" id="deadline" name="deadline" required>
+    </div>
+
+    <div>
       <label for="duration">Duration (in minutes):</label>
-      <input type="number" id="duration" name="duration" min="1" required><br><br>
-  
+      <input type="number" id="duration" name="duration" min="1" required>
+    </div>
+
+    <div>
       <label for="repetition">Repeats:</label>
       <select id="repetition" name="repetition">
         <option value="none">None</option>
         <option value="daily">Daily</option>
         <option value="weekly">Weekly</option>
         <option value="monthly">Monthly</option>
-      </select><br><br>
+      </select>
+    </div>
+
+    <div>
       <input type="submit" value="Submit">
-    </form>
-    <script src="script.js"></script>
-  </body>
+    </div>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Task Name</th>
+        <th>Priority</th>
+        <th>Deadline</th>
+        <th>Duration (minutes)</th>
+        <th>Repeats</th>
+      </tr>
+    </thead>
+    <tbody id="task-list">
+      <!-- Tasks will be added here dynamically -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
 </html>
-  
